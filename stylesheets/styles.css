@@ -257,3 +257,26 @@ footer {
 p.publication {
     margin: 0 0 5px;
 }
+
+aside {
+  width:270px;
+  float:left;
+  position:fixed;
+  bottom:115px;
+}
+
+aside ul {
+  list-style:none;
+  padding:0;
+  margin-bottom: 12px;
+}
+
+aside ul a {
+  line-height:1.6em;
+  font-size:12px;
+  display:block;
+}
+
+aside ul a:hover{
+  color:#999;
+}
