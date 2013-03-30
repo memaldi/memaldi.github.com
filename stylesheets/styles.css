@@ -253,3 +253,7 @@ footer {
     color:#444;
   }
 }
+
+p.publication {
+    margin: 0 0 5px;
+}
