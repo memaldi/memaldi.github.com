@@ -1,0 +1,45 @@
+@prefix : <http://memaldi.github.io/data.ttl> .
+@prefix aktors: <http://www.aktors.org/ontology/portal#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/> .
+
+<#memaldi> a                      aktors:PhD-Student ;
+         aktors:studies-at      :deusto ;
+         aktors:has-affiliation :deustotech ;
+         aktors:has-supervisor  <http://www.morelab.deusto.es/resource/dipina> ;
+         aktors:has-supervisor  <http://www.dia.fi.upm.es/~ocorcho/foaf.rdf> ;
+         foaf:name              "Mikel Emaldi" ;
+         foaf:mbox              "m.emaldi at deusto dot es" ;
+         foaf:account           :linkedin ,
+                                :twitter ,
+                                :slideshare ,
+                                :github ;
+         foaf:based_near        <http://sws.geonames.org/3109453/about.rdf> ;
+         foaf:interest          <http://dbpedia.org/resource/Linked_Data> ,
+                                <http://dbpedia.org/resource/Semantic_Web> ;
+         foaf:workplacehomepage <http://www.morelab.deusto.es/> ;
+         rel:worksWith          <http://paginaspersonales.deusto.es/josuka/foaf.rdf> , 
+                                <http://www.morelab.deusto.es/resource/pablo-orduna> , 
+                                <http://www.morelab.deusto.es/resource/pcuriel> , 
+                                <http://www.morelab.deusto.es/resource/ivan-pretel> , 
+                                <http://www.morelab.deusto.es/resource/aitor-gomez-goiri> , 
+                                <http://www.morelab.deusto.es/resource/dipina> , 
+                                <http://www.morelab.deusto.es/resource/koldo-zabaleta> , 
+                                <http://www.morelab.deusto.es/resource/eduardo-castillejo> , 
+                                <http://www.morelab.deusto.es/resource/aitor-almeida> , 
+                                <http://www.morelab.deusto.es/resource/david-ausin> , 
+                                <http://www.morelab.deusto.es/resource/unai-aguilera> , 
+                                <http://www.morelab.deusto.es/resource/bernhard-klein> , 
+                                <http://www.morelab.deusto.es/resource/dbujan> , 
+                                <http://www.morelab.deusto.es/resource/ana-belen-lago> .
+
+<#deusto> a             aktors:University ;
+          foaf:name     "University of Deusto"@en ,
+                      "Universidad de Deusto"@es ,
+                      "Deustuko Unibertsitatea"@eu ;
+                      foaf:homepage <http://www.deusto.es> .
+
+<#deustotech> a                           aktors:R-And-D-Institute ;
+              foaf:name                   "Deusto Institute of Technology" ;
+              aktors:organization-part-of :deusto ;
+              foaf:homepage               <http://www.deustotech.eu> .
