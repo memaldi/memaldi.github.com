@@ -23,8 +23,8 @@
           <h2>Publications</h2>
           <h3>Book Chapters</h3>
           {% for publication in site.data.books %}
-            <p class="publication">
-              {{publication.authors}} ({{publication.year}}). <b>{{publication.title}}</b>. In <i>{{publication.in}}</i> {% if publication.start_page and publication.end_page %}(pp. {{publication.start_page}}-{{publication.end_page}}){% endif %}.
+            <p itemscope itemtype="http://schema.org/Chapter" class="publication">
+              {{publication.authors}} (<span itemprop="datePublished">{{publication.year}}</span>). <b itemprop="name">{{publication.title}}</b>. In <i itemscope itemtype="http://schema.org/PublicationEvent" itemprop="publication"><span itemprop="name">{{publication.in}}</span></i> {% if publication.start_page and publication.end_page %}(pp. <span itemprop="pageStart">{{publication.start_page}}</span>-<span itemprop="pageEnd">{{publication.end_page}}</span>){% endif %}.
             </p>
             <p class="img" align="right"> <a onclick="showBibtex('book-bibtex-{{forloop.index}}')" id="{{forloop.index}}"><img src="img/bibtex.png"/></a> <a href="pdf/immoa2013.pdf"><img src="img/pdf.png"/></a> </p>
             <span hidden="true" id="book-bibtex-{{forloop.index}}">
@@ -42,10 +42,10 @@
 
           <h3>Conference papers</h3>
           {% for publication in site.data.conferences %}
-            <p class="publication">
-              {{publication.authors}} ({{publication.year}}). <b>{{publication.title}}</b>. In <i>{{publication.in}}</i> {% if publication.start_page and publication.end_page %}(pp. {{publication.start_page}}-{{publication.end_page}}){% endif %}.
+            <p itemscope itemtype="http://schema.org/ScholarlyArticle" itemid="#publication-{{forloop.index}}" class="publication">
+              {{publication.authors}} (<span itemprop="datePublished">{{publication.year}}</span>). <b itemprop="headline">{{publication.title}}</b>. In <i itemscope itemtype="http://schema.org/PublicationEvent" itemprop="publication"><span itemprop="name">{{publication.in}}</span></i> {% if publication.start_page and publication.end_page %}(pp. <span itemprop="pageStart">{{publication.start_page}}</span>-<span itemprop="pageEnd">{{publication.end_page}}</span>){% endif %}.
             </p>
-            <p class="img" align="right"> <a onclick="showBibtex('conference-bibtex-{{forloop.index}}')" id="{{forloop.index}}"><img src="img/bibtex.png"/></a> <a href="{{publication.slides}}"><img src="img/slides.png"/></a> <a href="{{publication.pdf}}"><img src="img/pdf.png"/></a> </p>
+            <p itemscope itemtype="http://schema.org/ScholarlyArticle" itemid="#publication-{{forloop.index}}" class="img" align="right"> <a onclick="showBibtex('conference-bibtex-{{forloop.index}}')" id="{{forloop.index}}"><img src="img/bibtex.png"/></a> <a href="{{publication.slides}}"><img src="img/slides.png"/></a> <a itemprop="image" href="{{publication.pdf}}"><img src="img/pdf.png"/></a> </p>
 
             <span hidden="true" id="conference-bibtex-{{forloop.index}}">
               {% highlight latex %}
